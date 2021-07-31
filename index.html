@@ -8,14 +8,14 @@
     <div class="row">
         <div class="col-xs-12 col-md-12">
             <div class="panel panel-primary">
-                <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
-                <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"> <strong>Survey Link
-                        Instructions</strong> <span class="collapse-text">(Click to expand)</span> </a>
-                <div class="panel-body" id="instructionBody">
-                    <!-- <div class="panel-body"> -->
+                <div class="panel-heading">
+                    <strong>Survey Agreement Form</strong>
+                </div>
+                <div class="panel-body">
 
                     <!-- Please place the consent form here-->
                     <p>PLEASE PLACE THE CONSENT FORM HERE</p>
+
                     <div style="text-align: center;">
                         <input type="checkbox" id="consent" value="accept"> I accept the terms.
                     </div>
@@ -107,24 +107,6 @@
 
 <!-- Open internal javascript -->
 <script>
-    $(document).ready(function () {
-        // Instructions expand/collapse
-        var content = $('#instructionBody');
-        var trigger = $('#collapseTrigger');
-        content.hide();
-        $('.collapse-text').text('(Click to expand)');
-        trigger.click(function () {
-            content.toggle();
-            var isVisible = content.is(':visible');
-            if (isVisible) {
-                $('.collapse-text').text('(Click to collapse)');
-            } else {
-                $('.collapse-text').text('(Click to expand)');
-            }
-        });
-        // end expand/collapse
-    });
-
     const checkAcceptance = () => {
         var acceptanceState = consent.checked;
         var linkToSurvey = document.getElementById("urlToSurvey");
